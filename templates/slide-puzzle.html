@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slide Puzzle</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style/slide-puzzle.css')}}">
+        <script src="{{url_for('static',filename='java/slide-puzzle.js')}}"></script>
+    </head>
+
+    <body>
+      
+        <img id="title" src="{{url_for('static',filename='image/slide-puzzle-img/logo.png')}}">
+        <div id="board">
+        </div>
+        <h1>Turns: <span id="turns">0</span></h1>
+    </body>
+  
+</html>

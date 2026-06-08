@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Portal | Games</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/home.css')}}">
+    <link rel="website icon" type="png" href="{{url_for('static',filename='image/main-img/Untitled design.png')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Press+Start+2P&family=Raleway:wght@700&family=Roboto+Mono:wght@700&family=Shadows+Into+Light&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+        <div class="header-nav">
+            <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
+            <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
+            <a href="/games" class="header-button {% if request.path == '/games' %}is-active{% endif %}">Games</a>
+        </div>
+        <div class="header-auth">
+            <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
+            <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+        </div>
+    </header>
+    <section id="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <div class="container">
+                    <div>
+                        <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="intro-logo">
+                    </div>
+                <style> h1 { font-family: "Montserrat", sans-serif; font-size: 1.5rem; color:  #FFCC00} </style>
+                <b><b><h1>Games</h1></b></b>
+                <br>
+                <p>Discover a world of fun and excitement with our collection of online games.
+                    <br><br>
+                    <ul>
+                    <li>
+                    - Puzzle: Test your logic and problem-solving skills with challenging puzzles that will keep your mind sharp. <br>
+                    - Slide Puzzle: Arrange the jumbled pieces to form the complete image. A classic brain teaser that's both relaxing and stimulating.<br>
+                    - BlackJack: Feel the thrill of the casino with this classic card game. Test your luck and strategy against the dealer.<br>
+                    - Candy Crush: Indulge your sweet tooth and match delectable candies in this addictive puzzle game.<br>
+                    - Connect 4: Challenge a friend to a classic game of strategy. Connect four of your colored discs in a row to win.<br>
+                    - Flappy Bird: Guide the quirky bird through a series of obstacles in this deceptively challenging game.<br>
+                    - Hangman: Guess the hidden word one letter at a time before the hangman figure is complete.<br>
+                    - Memory Cards: Flip pairs of matching cards to test your memory and concentration.<br>
+                    - Minesweeper: Navigate a minefield by carefully uncovering hidden tiles. A classic test of logic and risk-taking.<br>
+                    - Ping Pong: Enjoy a fast-paced game of table tennis. Test your reflexes and aim for victory.<br>
+                    - Rock Paper Scissors: A timeless game of chance. Choose your hand and see if you can outsmart your opponent.<br>
+                    - Snake: Control the growing snake and avoid obstacles as it slithers through the board.<br>
+                    - Space Invaders: Defend your planet from an alien invasion in this classic arcade shooter.<br>
+                    - Sudoku: Sharpen your logic and reasoning skills with this number-based puzzle game.<br>
+                    - Tic Tac Toe: A simple yet strategic game. Get three of your marks in a row to win.<br>
+                    - 2048: Combine tiles with the same number to reach the ultimate goal of 2048.<br>
+                    - Whack-a-Mole: Test your reflexes as you whack the moles popping up from their holes.<br>
+                    - Wordle: Guess the hidden word in six tries. A daily word puzzle that challenges your vocabulary.<br>
+                    - Doodle Jump: Guide the bouncing doodle through a never-ending upward journey.<br>
+                    - Dino game: A classic endless runner. Control the running dinosaur and jump over obstacles.<br>
+                    </li>
+                    </ul>
+                    <br><br>
+                </p>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="play-portal-section">
+        <div class="games-grid">
+            <div class="game-card twozerofoureight"><a href='/twozerofoureight'>2048</a></div>
+            <div class="game-card BlackJack"><a href='blackjack'>BlackJack</a></div>
+            <div class="game-card candy-crush"><a href='/candy-crush'>Candy Crush</a></div>
+            <div class="game-card connect4"><a href='/connect-four'>Connect 4</a></div>
+            <div class="game-card dino-game"><a href='/dino-game'>Dino Game</a></div>
+            <div class="game-card doodle-jump"><a href='/doodle-jump'>Doodle Jump</a></div>
+            <div class="game-card flappy-bird"><a href='/flappy-bird'>Flappy Bird</a></div>
+            <div class="game-card memory-cards"><a href='/memory-cards'>Memory Cards</a></div>
+            <div class="game-card minesweeper"><a href='/minesweeper'>Minesweeper</a></div>
+            <div class="game-card pingpong"><a href='/pingpong'>PingPong</a></div>
+            <div class="game-card puzzle"><a href='/puzzle'>Puzzle</a></div>
+            <div class="game-card rock-paper-scissors"><a href='/rockpaperscissors'>Rock Paper Scissors</a></div>
+            <div class="game-card slide-puzzle"><a href='/slide-puzzle'>Slide Puzzle</a></div>
+            <div class="game-card snake"><a href='/snake'>Snake</a></div>
+            <div class="game-card space-invaders"><a href='/space-invaders'>Space Invaders</a></div>
+            <div class="game-card sudoku"><a href='/sudoku'>Sudoku</a></div>
+            <div class="game-card tictactoe"><a href='/tictactoe'>Tic Tac Toe</a></div>
+            <div class="game-card whackamole"><a href='/whackamole'>Whack-a-mole</a></div>
+            <div class="game-card wordle"><a href='/wordle'>Wordle</a></div>
+            <div class="game-card hangman"><a href='/hangman'>Hangman</a></div>
+        </div>
+    </section>
+</body>
+<footer>
+    <p>© 2024-2025, PlayPortal. All Rights Reserved. </p>
+</footer>
+</html>

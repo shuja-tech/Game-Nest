@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="{{url_for('static' ,filename= 'style/minesweeper.css')}}">
+        <link rel="website icon" type="png" href="{{url_for('static' , filename='image/main-img/Untitled design.png')}}" />
+        <script src="{{url_for('static' ,filename= 'java/minesweeper.js')}}"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="{{url_for('static' , filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+            <h2 class="header-title"><a href="#play-portal-section">Play Portal</a></h2>
+            <div class="header-buttons">
+    
+            </div>
+        </header>
+        <h1>Mines: <span id="mines-count">0</span></h1>
+        <div id="board"></div>
+        <br>
+        <button id="flag-button">🚩</button>
+    </body>
+</html>

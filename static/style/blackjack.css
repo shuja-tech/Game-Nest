@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    background-image: url('https://t4.ftcdn.net/jpg/02/67/10/31/360_F_267103158_QTPpB2GxYh8RZBL4X9XL42SM7jiZ5yXL.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+/* Dark themed card styles */
+#dealer-cards img, #your-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+    background-color: #333; /* Dark gray background for cards */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 2px solid #222; /* Dark border for a more refined look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Soft shadow for a raised effect */
+}
+
+/* Darker hover effect for cards */
+#dealer-cards img:hover, #your-cards img:hover {
+    background-color: #001F3F; /* Slightly lighter gray on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button styles with dark theme */
+#hit, #stay {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #FFCC00; /* Dark button background */
+    color: white; /* Light text color */
+    border: 2px solid #222; /* Dark button border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+#hit:hover, #stay:hover {
+    background-color: #001F3F; /* Lighter dark shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+#hit:focus, #stay:focus {
+    outline: none; /* Remove focus outline for a cleaner look */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #dealer-cards img, #your-cards img {
+        height: 120px;
+        width: 85px;
+    }
+    
+    #hit, #stay {
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    #dealer-cards img, #your-cards img {
+        height: 90px;
+        width: 65px;
+    }
+    
+    #hit, #stay {
+        width: 65px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+

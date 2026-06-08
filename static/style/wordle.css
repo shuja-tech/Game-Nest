@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+body {
+    background-image: url('https://img.freepik.com/free-vector/top-view-blank-wooden-table-with-leaves-elements_1308-51324.jpg?t=st=1736844090~exp=1736847690~hmac=f06ca55d36652186d01fc3912105ebccfc6f9f56a6925f557dbba1454f75dd1c&w=740'); /* Background image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+hr {
+    width: 500px;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#board {
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    /* Box */
+    border: 2.5px solid rgb(0, 0, 0);
+    
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct {
+    background-color: #6AAA64;
+    color: white;
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: white;
+    border-color: white;
+}
+
+.absent {
+    background-color: #001824;
+    color: #dcffd3;
+    border-color:white;
+}
+
+
+.keyboard-row {
+    width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-tile {
+    width: 36px;
+    height: 40px;
+    margin: 1.8px;
+    border: px solid rgb(0, 0, 0);
+background-color: rgb(136, 133, 130);
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter-key-tile {
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(156, 190, 181);
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    hr {
+        width: 90%;
+    }
+    
+    #title {
+        font-size: 28px;
+    }
+    
+    #board {
+        width: 280px;
+        height: 336px;
+    }
+    
+    .tile {
+        width: 48px;
+        height: 48px;
+        margin: 2px;
+        font-size: 28px;
+    }
+    
+    .keyboard-row {
+        width: 320px;
+    }
+    
+    .key-tile {
+        width: 28px;
+        height: 35px;
+        margin: 1.5px;
+        font-size: 14px;
+    }
+    
+    .enter-key-tile {
+        width: 60px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    #title {
+        font-size: 24px;
+    }
+    
+    #board {
+        width: 245px;
+        height: 294px;
+    }
+    
+    .tile {
+        width: 42px;
+        height: 42px;
+        margin: 1.5px;
+        font-size: 24px;
+        border-width: 2px;
+    }
+    
+    .keyboard-row {
+        width: 280px;
+    }
+    
+    .key-tile {
+        width: 24px;
+        height: 32px;
+        margin: 1px;
+        font-size: 12px;
+    }
+    
+    .enter-key-tile {
+        width: 52px;
+        height: 32px;
+        font-size: 12px;
+    }
+}

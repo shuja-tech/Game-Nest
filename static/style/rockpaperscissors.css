@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    background-image: url("https://i.postimg.cc/GhmWDMjv/rock-paper-scissors-sign-pattern-seamless-hand-fist-game-background-fingers-ornament-baby-fabric-tex.webp");
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+#opponent-choice {
+    width: 240px;
+    height: 240px;
+    outline: black;
+    border: black;
+    margin-top: 10px;
+}
+
+#your-choice {
+    width: 240px;
+    height: 240px;
+    outline: black;
+    border: black;
+    margin-top: 10px; 
+}
+
+#choices {
+    width: 240px;
+    height: 80px;
+
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#choices img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    #opponent-choice, #your-choice {
+        width: 160px;
+        height: 160px;
+    }
+    
+    #choices {
+        width: 160px;
+        height: 53px;
+    }
+    
+    #choices img {
+        width: 53px;
+        height: 53px;
+    }
+}
+
+@media (max-width: 320px) {
+    #opponent-choice, #your-choice {
+        width: 120px;
+        height: 120px;
+    }
+    
+    #choices {
+        width: 120px;
+        height: 40px;
+    }
+    
+    #choices img {
+        width: 40px;
+        height: 40px;
+    }
+}

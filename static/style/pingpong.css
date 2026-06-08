@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    background-image: url("https://i.postimg.cc/Pq2QsMBQ/pbg.webp");
+    background-size: cover;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+#board {
+    background-color: rgb(0, 0, 0);
+    border-top: 5px solid skyblue;
+    border-bottom: 5px solid skyblue;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive canvas */
+@media (max-width: 768px) {
+    #board {
+        width: 100% !important;
+        max-width: 500px;
+        height: auto !important;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        max-width: 300px;
+    }
+    
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,571 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+/*VARIABLES CSS*/
+:root {
+  /*Colors*/
+  /*Color*/
+  --gradient-color: linear-gradient(90deg,
+                  #fad106,
+                  #e55b38);
+  --black-color: hsl(225, 15%, 6%);
+  --reflection-color: hsla(48, 30%, 95%, .3);
+  --body-color: hsl(48, 100%, 98%);
+
+  /*Font and typography*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 1rem;
+}
+
+/*BASE*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*BUTTON*/
+.container {
+  height: 100vh;
+  margin-inline: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  position: relative;
+  transition: transform .4s;
+}
+
+.button__content {
+  position: relative;
+  background: var(--gradient-color);
+  padding: 1.25rem 3rem;
+  border-radius: 4rem;
+  border: 3px solid var(--black-color);
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  overflow: hidden;
+}
+
+.button__text {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.button__icon {
+  font-size: 1.5rem;
+}
+
+.button__text, 
+.button__icon {
+  position: relative;
+  z-index: 2;
+}
+
+/* Reflection shapes */
+.button__reflection-1, 
+.button__reflection-2 {
+  width: 8px;
+  height: 120px;
+  background-color: var(--reflection-color);
+  rotate: 30deg;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: -180%;
+  margin: auto;
+  transition: left .6s cubic-bezier(.2, .5, .2, 1.2);
+}
+
+.button__reflection-1::after {
+  content: "";
+  width: 26px;
+  height: 100%;
+  background-color: var(--reflection-color);
+  position: absolute;
+  top: -1rem;
+  left: 1.25rem;
+}
+
+.button__reflection-2::after {
+  content: "";
+  width: 40px;
+  height: 100%;
+  background-color: var(--reflection-color);
+  position: absolute;
+  top: -1rem;
+  left: .8rem;
+}
+
+/* Moving geometric shapes */
+.button img {
+  position: absolute;
+  opacity: 0;
+  transition: transform .5s, opacity .5s;
+}
+
+.button__star-1 {
+  width: 20px;
+  top: -14px;
+  left: -16px;
+  transform: rotate(48deg) scale(.1);
+}
+
+.button__star-2 {
+  width: 40px;
+  right: -10px;
+  top: -4px;
+  transform: rotate(-48deg) scale(.1);
+}
+
+.button__circle-1, 
+.button__circle-2 {
+  width: 8px;
+}
+
+.button__circle-1 {
+  top: -8px;
+  left: 58px;
+  transform: scale(.1);
+}
+
+.button__circle-2 {
+  right: 34px;
+  bottom: -8px;
+  transform: scale(.1);
+}
+
+.button__diamond {
+  width: 18px;
+  top: -18px;
+  right: 62px;
+  transform: scale(.1);
+}
+
+.button__triangle {
+  width: 30px;
+  left: 15px;
+  bottom: -16px;
+  transform: rotate(-48deg) scale(.1);
+}
+
+/* Gradient shadow */
+.button__shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--gradient-color);
+  padding: 1.25rem 3rem;
+  border-radius: 4rem;
+  border: 3px solid var(--black-color);
+  z-index: -1;
+  transition: transform .3s;
+}
+
+/* View shadow gradient */
+.button:hover .button__shadow {
+  transform: translate(-.5rem, .5rem);
+}
+
+/* Move reflection */
+.button:hover .button__reflection-1 {
+  left: 120%;
+}
+
+.button:hover .button__reflection-2 {
+  left: -70%;
+}
+
+/* View geometric shapes */
+.button:hover {
+  transform: rotate(-4deg) scale(1.1);
+}
+
+.button:hover img {
+  opacity: 1;
+}
+
+.button:hover .button__star-1 {
+  transform: scale(1.1);
+  transition-delay: .1s;
+}
+
+.button:hover .button__star-2 {
+  transform: scale(1.1);
+}
+
+.button:hover .button__circle-1 {
+  transform: translateY(-8px) scale(1.1);
+  transition-delay: .1s;
+}
+
+.button:hover .button__circle-2 {
+  transform: translate(-20px, 20px) scale(1.1);
+}
+
+.button:hover .button__diamond {
+  transform: translateY(7px) rotate(-24deg) scale(1.1);
+}
+
+.button:hover .button__triangle {
+  transform: rotate(-12deg) scale(1.1);
+}
+
+
+/*MAIN WEBSITE*/
+
+
+body {
+    background-color: #001f3f; /* Deep blue background */
+    color: #ffffff; /* White text color */
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0; /* Remove bottom margin */
+    padding-bottom: 0; /* Remove bottom padding */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 31, 63, 0.8); /* Deep blue with transparency */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+}
+
+.header-logo {
+    height: 70px; /* Enlarge the logo */
+}
+
+.header-title {
+    color: #ffcc00; /* Sunset yellow */
+    font-size: 24px;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header-title a {
+    color: #ffcc00; /* Sunset yellow */
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.header-button {
+  flex: 1;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu-button {
+  flex: 1;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.header-button,
+.menu-button {
+  height: 40px; /* Set the same height for all buttons */
+  font-size: 16px; /* Set the same font size for all buttons */
+  padding: 0 10px; /* Add padding to adjust width based on text length */
+  border: none;
+  background-color: #007BFF; /* Example background color */
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px; /* Vertically center the text */
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-button:hover,
+.menu-button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    font-family: "Montserrat", sans-serif;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url('menu-background.jpg') no-repeat center center; /* Background image */
+    background-size: cover;
+    width: 200px;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    z-index: 1000;
+    animation: slideInFromLeft 0.5s ease-in-out;
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-family: "Montserrat", sans-serif;
+}
+
+.menu a {
+    display: block;
+    color: #001f3f; /* Deep blue */
+    text-decoration: none;
+    margin: 15px 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu a:hover {
+    background-color: rgba(0, 31, 63, 0.8); /* Solid color on hover */
+    color: #ffffff; /* White text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    font-family: "Montserrat", sans-serif;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+#intro-section {
+    text-align: left;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-top: 200; /* Remove top margin */
+    padding-top: 200; /* Remove top padding */
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 200;
+    padding-bottom: 200;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-logo {
+    position: absolute;
+    right: 0;
+    height: 200px;
+    width: 200px; /* Enlarge the logo */
+    align-items: top;
+    margin-top: 200; /* Remove top margin */
+    padding-top: 200; /* Remove top padding */
+}
+
+#play-portal-section {
+    padding-top: 20px;
+    margin-top: 60px; /* Add spacing between sections */
+    margin-bottom: 60px; /* Add spacing between sections */
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 20px;
+    margin-bottom: 20px; /* Keep spacing between game cards section and game facts section */
+    padding-bottom: 20px;
+}
+
+.game-card {
+    background: linear-gradient(135deg, #fad106, #e55b38); /* Gradient background */
+    border: 1px solid #cccccc;
+    padding: 15px;
+    width: 100%; /* Ensure cards take full width of grid column */
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+}
+
+.game-card:hover {
+    font-family: "Montserrat", sans-serif;
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+}
+
+.game-card a {
+    text-decoration: none;
+    color: #001f3f; /* Deep blue */
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+/* Individual game card styles */
+
+.twozerofoureight a {
+    font-family: 'Clear Sans', cursive;
+}
+
+.BlackJack a {
+    font-family: 'Sans', cursive;
+}
+
+.brick-breaker a {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.candy-crush a {
+    font-family: 'Indie Flower', cursive;
+}
+
+.connect4 a {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.dino-game a {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.doodle-jump a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.flappy-bird a {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.memory-cards a {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.minesweeper a {
+    font-family: 'Indie Flower', cursive;
+}
+
+.pingpong a {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.puzzle a {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.rock-paper-scissors a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.slide-puzzle a {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.snake a {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.space-invaders a {
+    font-family: 'Indie Flower', cursive;
+}
+
+.sudoku a {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.tictactoe a {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.whackamole a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.wordle a {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#video-section {
+    display: flex;
+    align-items: center;
+    padding: 60px 20px;
+    margin-top: 60px; /* Add spacing between sections */
+    margin-bottom: 60px; /* Add spacing between sections */
+}
+
+.video-content {
+    display: flex;
+    gap: 20px;
+}
+
+.gaming-facts {
+    font-family: "Montserrat", sans-serif;
+    flex: 1;
+}
+
+.video-placeholder {
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+footer {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgba(0, 31, 63, 0.8); /* Deep blue with transparency */
+    text-align: center;
+    padding: 10px 0;
+    color: #ffcc00; /* Sunset yellow */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

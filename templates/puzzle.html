@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avengers Puzzle</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='style/puzzle.css')}}">
+        <link rel="website icon" type="png" href="{{url_for('static',filename='image/main-img/Untitled design.png')}}"/>
+        <script src="{{url_for('static',filename='java/puzzle.js')}}"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+            <h2 class="header-title"><a href="#play-portal-section">Play Portal</a></h2>
+            <div class="header-buttons">
+          
+            </div>
+        </header>
+        <br>
+        <div id="board"></div>
+        <div id="pieces"></div>
+    </body>
+</html>

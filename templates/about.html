@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Portal</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/home.css')}}">
+    <link rel="website icon" type="png" href="{{url_for('static',filename='image/main-img/Untitled design.png')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+        <div class="header-nav">
+            <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
+            <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
+            <a href="/hoverthreed" class="header-button {% if request.path == '/games' %}is-active{% endif %}">Games</a>
+        </div>
+        <div class="header-auth">
+            <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
+            <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+        </div>
+    </header>
+    <section id="intro-section">
+        <div class="intro-content">
+            <div class="intro-text" style="max-width: 820px;">
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size: 2.2rem; color: #f32c15; margin: 0 0 14px 0;">
+                    Welcome to Game Nest 🎮
+                </h1>
+
+                <p class="about-lead" style="font-size: 1.0rem; color: rgba(255,255,255,0.9); line-height: 1.65; margin: 0 0 14px 0;">
+                    Your quick-stop arcade for browser games.
+                    Pick a game, hit play, and enjoy instant gameplay.
+                    <br><br>
+                    <b>Our mission:</b> make gaming <b>fun</b>, <b>fast</b>, and <b>personal</b>.
+                    That means favourites are saved <b>per user</b> so everyone has their own mini arcade.
+                </p>
+
+                <div class="about-pill-row" style="display:flex; flex-wrap:wrap; gap:12px; margin-top: 18px; margin-bottom: 18px;">
+                    <div class="about-pill" style="border: 1px solid rgba(255,204,0,0.5); background: rgba(0,0,0,0.28); color:#ffcc00; padding: 10px 14px; border-radius:999px; font-weight:870;">
+                        ✅ 20+ Arcade Games
+                    </div>
+                    <div class="about-pill" style="border: 1px solid rgba(255,204,0,0.5); background: rgba(0,0,0,0.28); color:#ffcc00; padding: 10px 14px; border-radius:999px; font-weight:800;">
+                        ⭐ Per-user Favourites
+                    </div>
+                    <div class="about-pill" style="border: 1px solid rgba(255,204,0,0.5); background: rgba(0,0,0,0.28); color:#ffcc00; padding: 10px 14px; border-radius:999px; font-weight:800;">
+                        ⚡ Instant Gameplay
+                    </div>
+                </div>
+<br>
+
+                <p class="about-lead" style="font-size: 1.02rem; color: rgba(255,255,255,0.88); line-height: 1.65; margin: 0;">
+                    <b>How favourites work:</b> log in, click the star on any game, and your starred games appear on your <b>Home dashboard</b>.
+                </p>
+            </div>
+
+            <div class="container">
+                <div>
+                    <a href="/hoverthreed" aria-label="Play games">
+                        <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="intro-logo">
+                    </a>
+                </div>
+<br>
+<br>
+<br>
+                <a href="/hoverthreed" class="button" aria-label="Play Now">
+                    <div class="button__content">
+                        <span class="button__text">Play Now!</span>
+                        <div class="button__reflection-1"></div>
+                        <div class="button__reflection-2"></div>
+                    </div>
+                    <img src="{{url_for('static',filename='image/main-img/star.png')}}" alt="" class="button__star-1">
+                    <img src="{{url_for('static',filename='image/main-img/star.png')}}" alt="" class="button__star-2">
+                    <img src="{{url_for('static',filename='image/main-img/circle.png')}}" alt="" class="button__circle-1">
+                    <img src="{{url_for('static',filename='image/main-img/circle.png')}}" alt="" class="button__circle-2">
+                    <img src="{{url_for('static',filename='image/main-img/diamond.png')}}" alt="" class="button__diamond">
+                    <img src="{{url_for('static',filename='image/main-img/triangle.png')}}" alt="" class="button__triangle">
+                    <div class="button__shadow"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br><br>
+</body>
+<footer>
+    <p>© 2026, Game Nest. All Rights Reserved.</p>
+</footer>
+</html>
+

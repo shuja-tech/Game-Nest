@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+body {
+    background-image: url('https://preview.redd.it/anyone-need-some-space-backgrounds-for-their-games-heres-a-v0-g01ijvmsijw91.jpg?width=6720&format=pjpg&auto=webp&s=7ada6679730cbaca92d592e316509ee13461df11');
+    font-family:"Montserrat", Courier, monospace;
+    text-align: center;
+}
+
+#board {
+    background-color: black;
+}
+/* Style for the Restart Button */
+#restart-btn {
+    background-color: rgb(115, 253, 2); /* Default blue color */
+    color: rgb(10, 10, 10); /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for a comfortable size */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    margin: 20px auto; /* Center the button and add spacing */
+    display: block; /* Block-level element */
+}
+
+/* Hover effect for the Restart Button */
+#restart-btn:hover {
+    background-color: #8195c5; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Active state for the Restart Button */
+#restart-btn:active {
+    background-color: #2c063b; /* Even darker blue when clicked */
+    transform: scale(1); /* Reset scale */
+}

@@ -1,0 +1,38 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+#board {
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive canvas */
+@media (max-width: 768px) {
+    #board {
+        width: 100% !important;
+        max-width: 500px;
+        height: auto !important;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        max-width: 350px;
+    }
+    
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Portal</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/home.css')}}">
+    <link rel="website icon" type="png" href="{{url_for('static',filename='image/main-img/Untitled design.png')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='style/favourites.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='style/logout.css')}}">
+</head>
+<body>
+    <header>
+        <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+        <div class="header-nav">
+            <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
+            <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
+            <a href="/hoverthreed" class="header-button {% if request.path == '/games' %}is-active{% endif %}">Games</a>
+        </div>
+        <div class="header-auth">
+            <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
+            <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+        </div>
+    </header>
+    <section id="dashboard-section">
+        <div class="dashboard-card">
+            <h1 class="dashboard-title">🎮 Welcome, <span id="welcome-user-name">{{ user_name if user_name else 'Guest' }}</span> 👋</h1>
+            <p class="dashboard-subtitle">Pick a game and jump in — your favourites sync automatically. ⭐</p>
+
+            <div class="dashboard-actions">
+                <a href="/hoverthreed" class="dashboard-link">Browse games</a>
+                <a href="/about" class="dashboard-link dashboard-link--ghost">About</a>
+
+                {% if user_name %}
+                    <button id="logout-btn" class="dashboard-link dashboard-link--ghost" type="button" aria-label="Logout"><span class="logout-icon" aria-hidden="true">⎋</span><span class="logout-text">Logout</span></button>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+<br>
+<br>
+
+    <section id="favourites-section">
+        <h2 class="section-title">Your Favourites ⭐</h2>
+        <p class="section-subtitle">
+            {% if not user_name %}
+                Login/Signup required to view favourites.
+            {% else %}
+                <span id="favourites-status"></span>
+            {% endif %}
+        </p>
+        <div id="favourites-grid" class="favourites-grid"></div>
+
+        <noscript>Please enable JavaScript to load favourites.</noscript>
+    </section>
+
+
+</body>
+<br>
+<footer>
+    <p>© 2026, Game Nest. All Rights Reserved. </p>
+</footer>
+<script src="{{url_for('static', filename='java/favourites.js')}}"></script>
+<script src="{{url_for('static', filename='java/favourites-sync.js')}}"></script>
+<script src="{{url_for('static', filename='java/auth.js')}}"></script>
+</html>

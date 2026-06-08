@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+body {
+    font-family:"Montserrat", Courier, monospace;
+    text-align: center;
+    background-image: url("https://i.postimg.cc/c42Wdxwq/images.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+#board {
+    /* background-color: skyblue; */
+    background-image: url("https://i.postimg.cc/nz25W71y/flappybirdbg.png");
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive canvas */
+@media (max-width: 768px) {
+    #board {
+        width: 100% !important;
+        max-width: 500px;
+        height: auto !important;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        max-width: 350px;
+    }
+    
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

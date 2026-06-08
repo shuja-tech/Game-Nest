@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+body {
+    background-image: url('https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-57640.jpg?t=st=1736421785~exp=1736425385~hmac=5a39cfb6ded35213d34c2361954914861031c6235b827abff3834305ff4dbda6&w=826'); /* Background image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    font-family: "Montserrat", Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}         
+
+h1{
+    font-weight: bolder;
+}
+
+#board {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Responsive canvas */
+@media (max-width: 768px) {
+    #board {
+        width: 100% !important;
+        max-width: 400px;
+        height: auto !important;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #board {
+        max-width: 300px;
+    }
+    
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}

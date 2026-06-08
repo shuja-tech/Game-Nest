@@ -1,0 +1,1099 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: absolute;
+    justify-content: center;
+    gap: 70px;
+    font-family: "Montserrat", sans-serif;
+    background: #001f3f;
+    outline: white;
+}
+
+.card1{
+    width: 1345px;
+    height: 350px;
+    background-image:  url("https://i.postimg.cc/kgv7LLvk/unnamed.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+    transform-style: preserve-3d;
+}
+
+.card1 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-twozerofoureight{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/wBx9zFW3/Gf-SEE.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card1:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/kgv7LLvk/unnamed.png");
+}
+
+.card1:hover .hover-image-twozerofoureight{
+    top: 35%;
+    opacity: 1;
+}
+
+.card1:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card2{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/rwkrp7Ky/hqdefault.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card2 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-pingpong{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/RFy3xDkB/logo200-removebg-preview.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card2:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/rwkrp7Ky/hqdefault.jpg");
+}
+
+.card2:hover .hover-image-pingpong{
+    top: 35%;
+    opacity: 1;
+}
+
+.card2:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card3{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/50TJwJfF/normalsolutions.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card3 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-sudoku{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/rs4kjHpZ/png-clipart-jigsaw-puzzles-sudoku-riddle-game-others-game-angle.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card3:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/50TJwJfF/normalsolutions.jpg");
+}
+
+.card3:hover .hover-image-sudoku{
+    top: 35%;
+    opacity: 1;
+}
+
+.card3:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card4{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/Prc6Tq2D/378-3787077-puzzle-blank-white-pieces-interlocking-jigsaw-pattern-puzzle.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card4 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-puzzle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/kgbT4dpp/Puzzle-svg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card4:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/Prc6Tq2D/378-3787077-puzzle-blank-white-pieces-interlocking-jigsaw-pattern-puzzle.png");
+}
+
+.card4:hover .hover-image-puzzle{
+    top: 35%;
+    opacity: 1;
+}
+
+.card4:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card5{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/Tw4bgKyq/Screenshot-64.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card5 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-memory-cards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/g0pH2LRx/back.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card5:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/Tw4bgKyq/Screenshot-64.png");
+}
+
+.card5:hover .hover-image-memory-cards{
+    top: 35%;
+    opacity: 1;
+}
+
+.card5:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card6{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/25MFS5S1/20250112-212031.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card6 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-tictactoe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/0NscKwYg/10199746.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card6:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/25MFS5S1/20250112-212031.png");
+}
+
+.card6:hover .hover-image-tictactoe{
+    top: 35%;
+    opacity: 1;
+}
+
+.card6:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card7{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/GhmWDMjv/rock-paper-scissors-sign-pattern-seamless-hand-fist-game-background-fingers-ornament-baby-fabric-tex.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card7 h1{
+    color: #001f3f;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-rockpaperscissors{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/mgxSKH6c/png-clipart-rock-paper-scissors-game-money-scissors-game-text-removebg-preview.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card7:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/GhmWDMjv/rock-paper-scissors-sign-pattern-seamless-hand-fist-game-background-fingers-ornament-baby-fabric-tex.webp");
+}
+
+.card7:hover .hover-image-rockpaperscissors{
+    top: 35%;
+    opacity: 1;
+}
+
+.card7:hover h1{
+    color: #ffcc00;
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card8{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/tTKh81XR/1.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card8 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-slide-puzzle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/GtnyqZQH/istockphoto-175479741-612x612.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card8:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/tTKh81XR/1.webp");
+}
+
+.card8:hover .hover-image-slide-puzzle{
+    top: 35%;
+    opacity: 1;
+}
+
+.card8:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card9{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/mD6YjzHg/classic-space-invader.avif");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card9 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-space-invaders{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/15gP5fcc/Adobe-Express-file.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card9:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/mD6YjzHg/classic-space-invader.avif");
+}
+
+.card9:hover .hover-image-space-invaders{
+    top: 35%;
+    opacity: 1;
+}
+
+.card9:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card10{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/02mSK29D/capsule-616x353.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card10 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-hangman{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/BvhPfjC9/51-Frx-Ta-HXq-L.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card10:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/02mSK29D/capsule-616x353.jpg");
+}
+
+.card10:hover .hover-image-hangman{
+    top: 35%;
+    opacity: 1;
+}
+
+.card10:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card11{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/v8xgCHgk/1-P65-OLCl-Ab0fsw-AQVel-Fwrg.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card11 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-blackjack{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/WpgLQM5r/png-transparent-blackjack-casino-playing-card-gambling-blackjack-forum-game-online-casino-croupier-t.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card11:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/v8xgCHgk/1-P65-OLCl-Ab0fsw-AQVel-Fwrg.png");
+}
+
+.card11:hover .hover-image-blackjack{
+    top: 35%;
+    opacity: 1;
+}
+
+.card11:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card12{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/L5cWs62N/images.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card12 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-wordle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/BZjQtYJK/1699448130785.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card12:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/L5cWs62N/images.png");
+}
+
+.card12:hover .hover-image-wordle{
+    top: 35%;
+    opacity: 1;
+}
+
+.card12:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card13{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/BZjD7xr3/whackamole-900px.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card13 h1{
+    color: #001f3f;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-whackamole{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/G3grMDkk/1164156.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card13:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/BZjD7xr3/whackamole-900px.jpg");
+}
+
+.card13:hover .hover-image-whackamole{
+    top: 35%;
+    opacity: 1;
+}
+
+.card13:hover h1{
+    color: #ffcc00;
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card14{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/LsQgFd6y/flappy-bird-10.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card14 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-flappy-bird{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/4yJD60pg/210-2109009-3676-x-976-16-0-flappy-bird-logo-removebg-preview.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card14:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/LsQgFd6y/flappy-bird-10.jpg");
+}
+
+.card14:hover .hover-image-flappy-bird{
+    top: 35%;
+    opacity: 1;
+}
+
+.card14:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card15{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/j5TmT1g7/Kmines-Expert-Game-with-Numbers-1-8.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card15 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-minesweeper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/9fZKv2p2/unnamed.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card15:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/j5TmT1g7/Kmines-Expert-Game-with-Numbers-1-8.png");
+}
+
+.card15:hover .hover-image-minesweeper{
+    top: 35%;
+    opacity: 1;
+}
+
+.card15:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card16{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/1zSfqpvZ/play-connect-four-game-play.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card16 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-connect-four{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/tTSTw8pX/th.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card16:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/1zSfqpvZ/play-connect-four-game-play.png");
+}
+
+.card16:hover .hover-image-connect-four{
+    top: 35%;
+    opacity: 1;
+}
+
+.card16:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card17{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/65qSBn0Y/Dino-Game-OG-logo.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card17 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-dino-game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/HkwLdrdv/offline-dinosaur-white-cartoon-o0aad49-600.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card17:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/65qSBn0Y/Dino-Game-OG-logo.jpg");
+}
+
+.card17:hover .hover-image-dino-game{
+    top: 35%;
+    opacity: 1;
+}
+
+.card17:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card18{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/6qWrLkzt/unnamed.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card18 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-doodle-jump{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://meenakshi-anand.github.io/DoodleJump/images/graphics.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card18:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/6qWrLkzt/unnamed.jpg");
+}
+
+.card18:hover .hover-image-doodle-jump{
+    top: 35%;
+    opacity: 1;
+}
+
+.card18:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card19{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/Dzc3YsnF/Snake-OG-logo.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card19 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-snake{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/g2nK7Pp0/snake-game-2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}   
+
+.card19:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/Dzc3YsnF/Snake-OG-logo.jpg");
+}
+
+.card19:hover .hover-image-snake{
+    top: 35%;
+    opacity: 1;
+}
+
+.card19:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+
+
+
+.card20{
+    width: 1345px;
+    height: 350px;
+    background-image: url("https://i.postimg.cc/3NTSMfBc/81u6j-GIb-TBL.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #ffcc00;
+}
+
+.card20 h1{
+    color: #ffcc00;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.hover-image-candy-crush{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.postimg.cc/KvQ9VNg0/images-1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s;
+}
+
+.card20:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url("https://i.postimg.cc/3NTSMfBc/81u6j-GIb-TBL.jpg");
+}
+
+.card20:hover .hover-image-candy-crush{
+    top: 35%;
+    opacity: 1;
+}
+
+.card20:hover h1{
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #ffcc00,
+                 0px 0px 20px #ffcc00;
+}
+

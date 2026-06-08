@@ -1,0 +1,8 @@
+body {
+    text-align: center;
+    background-color: rgb(250, 208, 131);
+}
+
+#board {
+    background-image: url("https://i.postimg.cc/Tw3Qpsrs/doodlejumpbg.png");
+}
