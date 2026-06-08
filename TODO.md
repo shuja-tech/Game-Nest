@@ -1,10 +1,11 @@
-# TODO
+# Project TODO
 
-- [x] Implement MongoDB-backed login/signup using bcrypt + Flask sessions
-- [x] Implement favourites API (login-only) storing favourite game routes
-- [x] Wire login/signup UI to backend APIs
-- [ ] Add ⭐ star button on each card in `/hoverthreed`
-- [ ] Add favourites section on `index.html` and render favourite games (login-only)
-- [ ] Add client-side JS for favourites toggle + favourites rendering
-- [ ] Test end-to-end: signup -> login -> favourite -> favourites section rendering
+- [ ] Add left slide-out sidebar menu triggered by navbar "More" button.
+  - [ ] Update `templates/index.html`, `templates/about.html`, `templates/games.html` with:
+    - [ ] `More` button
+    - [ ] hidden sidebar markup + overlay
+- [x] Update `static/style/home.css` with sidebar + overlay styles (off-canvas -> slide-in)
+
+  - [ ] Add JS to toggle sidebar open/close (click More, click overlay, press Esc)
+  - [ ] Manual test in browser on `/`, `/about`, `/games`
 

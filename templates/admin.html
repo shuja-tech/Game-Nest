@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Game Nest</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style/home.css')}}">
+</head>
+<body>
+  <header>
+    <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+    <div class="header-nav">
+      <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
+      <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
+      <a href="/hoverthreed" class="header-button {% if request.path == '/games' %}is-active{% endif %}">Games</a>
+
+      <button id="more-btn" class="header-button" type="button" aria-haspopup="dialog" aria-controls="more-sidebar" aria-expanded="false">More</button>
+    </div>
+
+    <div class="header-auth">
+      <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
+      <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+    </div>
+  </header>
+
+  <div id="more-overlay" class="more-overlay" aria-hidden="true"></div>
+  <nav id="more-sidebar" class="more-sidebar" aria-label="More menu">
+    <div class="more-sidebar__header">
+      <div class="more-sidebar__title">More</div>
+      <button id="more-close-btn" class="more-sidebar__close" type="button" aria-label="Close">✕</button>
+    </div>
+    <a href="/" class="more-sidebar__link">Home</a>
+    <a href="/about" class="more-sidebar__link">About</a>
+    <a href="/hoverthreed" class="more-sidebar__link">Games</a>
+
+    <div class="more-sidebar__divider"></div>
+    <a href="/admin" class="more-sidebar__link">Admin</a>
+  </nav>
+
+  <main id="admin-section" style="padding-top: 100px;">
+    <section class="dashboard-card" style="margin: 20px auto 60px; width: min(1100px, calc(100% - 40px));">
+      <h1 class="dashboard-title">Admin Panel</h1>
+      <p class="dashboard-subtitle">Manage users in MongoDB.</p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px;">
+        <button id="admin-refresh-btn" class="dashboard-link dashboard-link--ghost" type="button">Refresh Users</button>
+      </div>
+
+      <div style="overflow:auto; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12);">
+        <table style="width:100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left; padding:12px; color:#fff; border-bottom:1px solid rgba(255,255,255,0.12);">User ID</th>
+              <th style="text-align:left; padding:12px; color:#fff; border-bottom:1px solid rgba(255,255,255,0.12);">Username</th>
+              <th style="text-align:left; padding:12px; color:#fff; border-bottom:1px solid rgba(255,255,255,0.12);">Password Hash</th>
+              <th style="text-align:left; padding:12px; color:#fff; border-bottom:1px solid rgba(255,255,255,0.12);">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-users-tbody">
+            <tr><td colspan="4" style="padding:14px; color: rgba(255,255,255,0.75);">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="admin-error" style="color: #ffcc00; margin-top: 14px;"></p>
+    </section>
+  </main>
+
+  <script src="{{url_for('static',filename='java/admin.js')}}"></script>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('more-btn');
+      const sidebar = document.getElementById('more-sidebar');
+      const overlay = document.getElementById('more-overlay');
+      const closeBtn = document.getElementById('more-close-btn');
+      if (!btn || !sidebar || !overlay || !closeBtn) return;
+      function setOpen(isOpen) {
+        document.body.classList.toggle('more-open', isOpen);
+        btn.setAttribute('aria-expanded', String(isOpen));
+        overlay.setAttribute('aria-hidden', String(!isOpen));
+      }
+      function close() { setOpen(false); }
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const isOpen = document.body.classList.contains('more-open');
+        setOpen(!isOpen);
+      });
+      overlay.addEventListener('click', close);
+      closeBtn.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') close();
+      });
+    })();
+  </script>
+</body>
+</html>
+

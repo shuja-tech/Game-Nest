@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Nest | User Panel</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='style/favourites.css')}}">
+</head>
+<body>
+<header>
+    <img src="{{url_for('static',filename='image/main-img/Untitled design.png')}}" alt="Website Logo" class="header-logo">
+    <div class="header-nav">
+        <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
+        <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
+        <a href="/hoverthreed" class="header-button {% if request.path == '/hoverthreed' %}is-active{% endif %}">Games</a>
+        <a href="/user" class="header-button {% if request.path == '/user' %}is-active{% endif %}">My Account</a>
+    </div>
+    <div class="header-auth">
+        <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
+        <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+    </div>
+</header>
+
+<section id="dashboard-section">
+    <div class="dashboard-card">
+        <h1 class="dashboard-title">User Panel 👤</h1>
+        <p class="dashboard-subtitle">Welcome, <span id="user-panel-username"></span></p>
+
+        <div class="dashboard-actions">
+            <a href="/hoverthreed" class="dashboard-link">Browse games</a>
+            <a href="/" class="dashboard-link dashboard-link--ghost">Back to Home</a>
+            <button id="logout-btn" class="dashboard-link dashboard-link--ghost" type="button" aria-label="Logout">
+                <span class="logout-icon" aria-hidden="true">⎋</span>
+                <span class="logout-text">Logout</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<br><br>
+
+<section id="favourites-section">
+    <h2 class="section-title">Your Favourites ⭐</h2>
+    <p class="section-subtitle"><span id="user-favourites-status"></span></p>
+    <div id="favourites-grid" class="favourites-grid"></div>
+</section>
+
+<br><br>
+
+<section id="recently-played-section">
+    <h2 class="section-title">Recently Played 🎮</h2>
+    <p class="section-subtitle"><span id="user-recently-played-status"></span></p>
+    <div id="recently-played-grid" class="favourites-grid"></div>
+</section>
+
+<br><br>
+
+<section id="stats-section">
+    <h2 class="section-title">Top Games 📈</h2>
+    <p class="section-subtitle">Your most-played games</p>
+    <div id="user-stats-grid" class="favourites-grid"></div>
+</section>
+
+<script src="{{url_for('static', filename='java/auth.js')}}"></script>
+<script src="{{url_for('static', filename='java/user.js')}}"></script>
+</body>
+
+<footer>
+    <p>© 2026, Game Nest. All Rights Reserved.</p>
+</footer>

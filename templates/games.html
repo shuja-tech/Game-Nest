@@ -15,13 +15,42 @@
             <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
             <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
             <a href="/games" class="header-button {% if request.path == '/games' %}is-active{% endif %}">Games</a>
+
+            <button id="more-btn" class="header-button" type="button" aria-haspopup="dialog" aria-controls="more-sidebar" aria-expanded="false">More</button>
         </div>
+
         <div class="header-auth">
             <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
             <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
         </div>
     </header>
+    <div id="more-overlay" class="more-overlay" aria-hidden="true"></div>
+
+    <nav id="more-sidebar" class="more-sidebar" aria-label="More menu">
+        <div class="more-sidebar__header">
+            <div class="more-sidebar__title">More</div>
+            <button id="more-close-btn" class="more-sidebar__close" type="button" aria-label="Close">✕</button>
+        </div>
+        <a href="/" class="more-sidebar__link">Home</a>
+        <a href="/about" class="more-sidebar__link">About</a>
+        <a href="/games" class="more-sidebar__link">Games</a>
+
+        <div class="more-sidebar__divider"></div>
+
+        {% if user_name %}
+            <div class="more-sidebar__user">Signed in as <span class="more-sidebar__user-name">{{ user_name }}</span></div>
+            <a href="/admin" class="more-sidebar__link">Admin</a>
+            <a href="#" id="more-logout-link" class="more-sidebar__link more-sidebar__logout">Logout</a>
+
+        {% else %}
+            <a href="/login" class="more-sidebar__link">Login</a>
+            <a href="/signup" class="more-sidebar__link">Sign Up</a>
+        {% endif %}
+
+    </nav>
+
     <section id="intro-section">
+
         <div class="intro-content">
             <div class="intro-text">
                 <div class="container">
@@ -70,7 +99,8 @@
     <section id="play-portal-section">
         <div class="games-grid">
             <div class="game-card twozerofoureight"><a href='/twozerofoureight'>2048</a></div>
-            <div class="game-card BlackJack"><a href='blackjack'>BlackJack</a></div>
+            <div class="game-card BlackJack"><a href='/blackjack'>BlackJack</a></div>
+
             <div class="game-card candy-crush"><a href='/candy-crush'>Candy Crush</a></div>
             <div class="game-card connect4"><a href='/connect-four'>Connect 4</a></div>
             <div class="game-card dino-game"><a href='/dino-game'>Dino Game</a></div>
@@ -93,6 +123,55 @@
     </section>
 </body>
 <footer>
-    <p>© 2024-2025, PlayPortal. All Rights Reserved. </p>
+    <p>© 2026, Game Nest. All Rights Reserved. </p>
 </footer>
+<script>
+  (function () {
+    const btn = document.getElementById('more-btn');
+    const sidebar = document.getElementById('more-sidebar');
+    const overlay = document.getElementById('more-overlay');
+    const closeBtn = document.getElementById('more-close-btn');
+
+    if (!btn || !sidebar || !overlay || !closeBtn) return;
+
+    function setOpen(isOpen) {
+      document.body.classList.toggle('more-open', isOpen);
+      btn.setAttribute('aria-expanded', String(isOpen));
+      overlay.setAttribute('aria-hidden', String(!isOpen));
+    }
+
+    function close() {
+      setOpen(false);
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = document.body.classList.contains('more-open');
+      setOpen(!isOpen);
+    });
+
+    overlay.addEventListener('click', close);
+    closeBtn.addEventListener('click', close);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+
+    // Logout inside sidebar (same behavior as header logout-btn)
+    const logoutLink = document.getElementById('more-logout-link');
+    if (logoutLink) {
+      logoutLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        fetch('/api/auth/logout', { method: 'POST' })
+          .then(() => {
+            window.location.href = '/';
+          })
+          .catch(() => {
+            window.location.href = '/';
+          });
+      });
+    }
+  })();
+</script>
 </html>
+

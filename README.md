@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# 🎮 Game Nest
-
-Welcome to Game Nest – a collaborative gaming platform project designed to bring together interactive experiences, scalable architecture, and modern development practices.
-This repository builds upon and extends concepts from the reference project:
-👉 https://github.com/shuja-tech/Play-Portal-2-dep.git
-=======
 # 🎮 Play Portal
 
 A modern web-based gaming platform built with Flask and Supabase, featuring 20+ interactive games with user authentication and personalized game tracking.
@@ -269,4 +262,3 @@ MIT License - feel free to use this project for learning or commercial purposes.
 
 <p align="center">Made with ❤️ for gamers, by gamers</p>
 <p align="center">🎮 Enjoy playing! 🎮</p>
->>>>>>> 5ce4357 (Deploy Flask app with MongoDB)

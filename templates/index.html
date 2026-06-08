@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Portal</title>
+    <title>Game Nest</title>
     <link rel="stylesheet" href="{{url_for('static',filename='style/home.css')}}">
     <link rel="website icon" type="png" href="{{url_for('static',filename='image/main-img/Untitled design.png')}}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
@@ -17,13 +17,46 @@
             <a href="/" class="header-button {% if request.path == '/' %}is-active{% endif %}">Home</a>
             <a href="/about" class="header-button {% if request.path == '/about' %}is-active{% endif %}">About</a>
             <a href="/hoverthreed" class="header-button {% if request.path == '/games' %}is-active{% endif %}">Games</a>
+
+            <button id="more-btn" class="header-button" type="button" aria-haspopup="dialog" aria-controls="more-sidebar" aria-expanded="false">More</button>
         </div>
+
         <div class="header-auth">
-            <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
-            <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+            {% if user_name %}
+                <button id="logout-btn" class="header-button" style="cursor:pointer;">Logout</button>
+            {% else %}
+                <a href="/login" class="header-button {% if request.path == '/login' %}is-active{% endif %}">Login</a>
+                <a href="/signup" class="header-button {% if request.path == '/signup' %}is-active{% endif %}">Sign Up</a>
+            {% endif %}
         </div>
     </header>
+    <div id="more-overlay" class="more-overlay" aria-hidden="true"></div>
+
+    <nav id="more-sidebar" class="more-sidebar" aria-label="More menu">
+        <div class="more-sidebar__header">
+            <div class="more-sidebar__title">More</div>
+            <button id="more-close-btn" class="more-sidebar__close" type="button" aria-label="Close">✕</button>
+        </div>
+        <a href="/" class="more-sidebar__link">Home</a>
+        <a href="/about" class="more-sidebar__link">About</a>
+        <a href="/hoverthreed" class="more-sidebar__link">Games</a>
+
+        <div class="more-sidebar__divider"></div>
+
+        {% if user_name %}
+            <div class="more-sidebar__user">Signed in as <span class="more-sidebar__user-name">{{ user_name }}</span></div>
+            <a href="/admin" class="more-sidebar__link">Admin</a>
+            <a href="#" id="more-logout-link" class="more-sidebar__link more-sidebar__logout">Logout</a>
+
+        {% else %}
+            <a href="/login" class="more-sidebar__link">Login</a>
+            <a href="/signup" class="more-sidebar__link">Sign Up</a>
+        {% endif %}
+
+    </nav>
+
     <section id="dashboard-section">
+
         <div class="dashboard-card">
             <h1 class="dashboard-title">🎮 Welcome, <span id="welcome-user-name">{{ user_name if user_name else 'Guest' }}</span> 👋</h1>
             <p class="dashboard-subtitle">Pick a game and jump in — your favourites sync automatically. ⭐</p>
@@ -46,6 +79,21 @@
 <br>
 <br>
 
+    <section id="recently-played-section">
+        <h2 class="section-title">Recently Played 🎮</h2>
+        <p class="section-subtitle">
+            {% if not user_name %}
+                Login/Signup required to view recent plays.
+            {% else %}
+                <span id="recently-played-status"></span>
+            {% endif %}
+        </p>
+        <div id="recently-played-grid" class="favourites-grid"></div>
+        <noscript>Please enable JavaScript to load recently played games.</noscript>
+    </section>
+<br>
+<br>
+<br>
     <section id="favourites-section">
         <h2 class="section-title">Your Favourites ⭐</h2>
         <p class="section-subtitle">
@@ -63,10 +111,68 @@
 
 </body>
 <br>
+<br>
 <footer>
     <p>© 2026, Game Nest. All Rights Reserved. </p>
 </footer>
 <script src="{{url_for('static', filename='java/favourites.js')}}"></script>
 <script src="{{url_for('static', filename='java/favourites-sync.js')}}"></script>
+<script src="{{url_for('static', filename='java/recently-played.js')}}"></script>
 <script src="{{url_for('static', filename='java/auth.js')}}"></script>
+
+<script>
+  (function () {
+    const btn = document.getElementById('more-btn');
+    const sidebar = document.getElementById('more-sidebar');
+    const overlay = document.getElementById('more-overlay');
+    const closeBtn = document.getElementById('more-close-btn');
+
+    if (!btn || !sidebar || !overlay || !closeBtn) return;
+
+    function setOpen(isOpen) {
+      document.body.classList.toggle('more-open', isOpen);
+      btn.setAttribute('aria-expanded', String(isOpen));
+      overlay.setAttribute('aria-hidden', String(!isOpen));
+    }
+
+    function open() {
+      setOpen(true);
+    }
+
+    function close() {
+      setOpen(false);
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = document.body.classList.contains('more-open');
+      setOpen(!isOpen);
+    });
+
+    overlay.addEventListener('click', close);
+    closeBtn.addEventListener('click', close);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+
+    // Logout inside sidebar (same behavior as header logout-btn)
+    const logoutLink = document.getElementById('more-logout-link');
+    if (logoutLink) {
+      logoutLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        // header logout uses POST /api/auth/logout
+        fetch('/api/auth/logout', { method: 'POST' })
+          .then(() => {
+            window.location.href = '/';
+          })
+          .catch(() => {
+            window.location.href = '/';
+          });
+      });
+    }
+  })();
+</script>
 </html>
+
+

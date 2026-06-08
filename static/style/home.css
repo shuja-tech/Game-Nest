@@ -837,3 +837,135 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* ==================== More (left slide-out sidebar) ==================== */
+
+.more-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 1100;
+}
+
+.more-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  max-width: 85vw;
+  background: rgba(8, 10, 35, 0.98);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.35);
+  transform: translateX(-100%);
+  transition: transform 260ms cubic-bezier(.2, .8, .2, 1);
+  z-index: 1200;
+  padding-top: 64px; /* space under fixed header */
+  overflow-y: auto;
+}
+
+.more-sidebar__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  max-width: 85vw;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background: rgba(1, 0, 42, 0.98);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 1300;
+}
+
+.more-sidebar__title {
+  color: #f5f7fb;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.more-sidebar__close {
+  height: 32px;
+  width: 32px;
+  border-radius: 10px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f7fb;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-sidebar__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 14px 14px;
+}
+
+.more-sidebar__link {
+  display: block;
+  padding: 12px 16px;
+  margin: 0 10px;
+  border-radius: 12px;
+  color: #f5f7fb;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 10px;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Admin + Logout highlight */
+.more-sidebar__link.more-sidebar__logout,
+.more-sidebar__link[href="/admin"] {
+  color: #ed2f13;
+  border-color: rgba(237, 47, 19, 0.35);
+}
+
+.more-sidebar__link.more-sidebar__logout:hover,
+.more-sidebar__link[href="/admin"]:hover {
+  background: rgba(237, 47, 19, 0.08);
+}
+
+
+.more-sidebar__link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.more-open .more-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.more-open .more-sidebar {
+  transform: translateX(0);
+}
+
+.more-sidebar__user {
+  padding: 0 16px;
+  margin: 6px 10px 14px;
+  color: rgba(255,255,255,0.9);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+}
+
+.more-sidebar__user-name {
+  color: #ed2f13;
+}
+
+
+
